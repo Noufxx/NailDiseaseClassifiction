@@ -1,0 +1,184 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left{
+    float: left;
+    background-color: #472604;
+    width: 40%;
+    height: 100vh;
+}
+
+.left img{
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-top: 80px;
+}
+.left h2 {
+    color: #fffbe2;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.left h4 {
+    color: #fffbe2;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.left .signup-button {
+    font-size: 17px;
+    font-weight:bold;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    background-color: #472604;
+    color: #fffbe2;
+    border-radius: 50px;
+    border: 2px solid #fffbe2;
+    text-align: center;
+    display: block;
+    width: 150px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.right{
+    float: right;
+    width: 60%;
+    height: 100vh;
+    text-align: center;
+}
+
+.right h1{
+    color: #472604;
+    margin-top: 60px;
+    font-size: 45px;
+}
+
+.right form{
+    max-width: 550px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: left;
+    margin-top: 70px;
+    position: relative;
+}
+.right form .label{
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.right form .input {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1px solid #cfcece;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #404246;
+    outline: none;
+    resize: none;
+}
+
+.right form .forgot-btn {
+    text-decoration: none;
+    color:#70553a;
+    font-size: 15px;
+    position: absolute;
+    right: 0px;
+    margin-top: 5px;
+}
+
+.right form .btn-wrapper{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+.right form .signin-btn{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    background-color: #472604;
+    color: #fffbe2;
+    border-radius: 50px;
+    border: 2px solid #472604;
+    text-align: center;
+    display: block;
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.right form .cancel-btn {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    background-color: white;
+    color: #472604;
+    border-radius: 50px;
+    border: 2px solid  #472604;
+    text-align: center;
+    display: block;
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+}
+.form-control {
+    border: none;
+}
+
+.form-control small {
+    display: none;
+    font-size: 13px;
+    margin-bottom: -15px;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.error small {
+    color: #e74c3c;
+    display: flex;
+}
+.form-control.success input {
+    border-color: #2ecc71;
+}
+.right .doneResetPassDiv{
+    width: 100%;
+    height: 5%;
+    background-color:rgb(174, 207, 174);
+}
+
+.doneResetPassText{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: rgb(86, 110, 86);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: 50px;
+    width: 60%;
+    margin-left: 20%;
+}

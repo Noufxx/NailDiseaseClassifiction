@@ -1,0 +1,139 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    text-align: center;
+}
+.title{
+    color: #472604;
+    margin-top: 20px;
+    font-size: 38px;
+}
+form {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.left{
+    float: left;
+    width: 50%;
+    height: 85vh;
+    text-align: left;
+    margin-left: 35px;
+}
+
+form .label {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-control .input {
+    width: 90%;
+    height: 8%;
+    padding: 12px 24px;
+    border: 1px solid #cfcece;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #404246;
+    outline: none;
+    resize: none;
+}
+
+
+.right{
+    float: right;
+    width: 50%;
+    height: 85vh;
+    text-align: left;
+
+}
+
+.right  .pass_inst{
+    background: none;
+    border: none;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -40px;
+    cursor: pointer;
+}
+.right  .btn-wrapper{
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-top: 40px;
+}
+.right .signup-btn{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    background-color: #472604;
+    color: #fffbe2;
+    border-radius: 50px;
+    border: 2px solid #472604;
+    text-align: center;
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.right .cancel-btn {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    background-color: white;
+    color: #472604;
+    border-radius: 50px;
+    border: 2px solid  #472604;
+    text-align: center;
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.right .signin{
+    font-size: 15px;
+    margin-left: 250px;
+    margin-top: 30px;
+    color: #6b7280;
+}
+
+.form-control{
+    border: none;
+}
+.form-control small{
+    display: none;
+    font-size: 13px;
+    margin-bottom: -15px;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+.form-control.error select {
+    border-color: #e74c3c;
+}
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error small {
+    color: #e74c3c;
+    display: flex;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head > 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'admins.css') }}">
+    <title>Nail Scope</title>
+</head>
+
+<body style="background-color: #fffbe2">
+
+  <div class="container">
+    <div class="navbar">
+       <h1 style= 'color: #472604'>Blogs</h1>
+             <nav>
+                 <ul>
+                     <li><a href="{{url_for('index')}}#diagnose">Diagnose</a></li>
+                     <li><a href="{{url_for('index')}}#heading1">Nail Diseases</a></li>
+                     <li><a href="{{url_for('index')}}#box3">About Us</a></li>
+                     <li><a href="{{url_for('index_Profile')}}"><img src="../static/img/profile1.png" class="profile" alt="Profile Button" width="30px" height="30px"></a></li>
+                 </ul>
+             </nav>
+         </div> </div>  
+  
+  <!-- <div class="container"> -->
+  <!-- <div class="panel_title">
+    <h2 style="color: #472604;">Blogs</h2>
+  </div> -->
+  <!-- </div> -->
+  
+
+<div class="cards">
+
+  {% for blog in blogs %}
+<div class="card">
+  <div class="card__content">
+  <a href="{{ url_for('blogDet', Blog_ID= blog['Blog_ID'] ) }}">
+  <h3>{{blog['Title']}}</h3></a>
+  <img class="card__image" src="../static/img/{{blog['Photo']}}" alt="">
+  <div class="date">
+  <p >{{blog['Author_name']}}</p> <p>{{blog['Date']}}</p>
+</div>
+  <br>
+  <p>{{blog['Description']}}</p>
+  <br><a class="add_button" href="{{ url_for('blogDet', Blog_ID= blog['Blog_ID'] ) }}">Read More</a>
+</div>
+</div>
+{% endfor %}
+</div>
+</body>
+
+</html>

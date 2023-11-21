@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Scope</title>
+    <link rel="stylesheet" href="../static/main.css">
+        </head>
+        <body>
+
+        <!--Header-->
+        <div class="bg"><div class="container">
+            <div class="navbar">
+                <h1>Nail Scope</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#uploadbox">Diagnose</a></li>
+                        <li><a href="#heading1">Nail Diseases</a></li>
+                        <li><a href="#box3">About Us</a></li>
+                        <li><a href="#box3">Blogs</a></li>
+                        <li><a href="{{url_for('index_Profile')}}"><img src="../static/img/user.png" alt="" class="profile"></a></li>
+                    </ul>
+                </nav>
+            </div> 
+
+            
+       <!--Bubbles topic-->
+        <div class="container2">
+            <div class="sen">
+                <h1>Find Assurance</h1>
+                <h2>under Our Scope </h2>
+                <p>An intelligent Approcah For Nail Disease Diagnosis</p>
+                <a href="#diagnose" class="button1" >Try Now</a> 
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            <!--Nail diseases details-->
+            <div class="bg1"> 
+            <div id="heading1">
+                <!--<h1>{{ p }}</h1> !-->
+                   <h1 class="title">Nail Diseases</h1>
+                    <h2>Read about Diseases Predicted by Our Model</h2> 
+                    <div id="C3">
+                    </div>  
+                </div>
+            
+                <section id="section2">
+                    <div class="box1_1">
+                        <div class="space">
+                            <img src="../static/img/melanomapic.png" alt="" class="nail">
+                        </div>
+                    </div>
+                    <div class="box1_2">
+                        <div class="space">
+                            <img src="../static/img/beaus.png" alt="" class="nail">
+                        </div>
+                    </div>
+                    <div class="box1_3" style="position: relative; z-index: 500;">
+                        <div class="space">
+                            <img src="../static/img/eczema.png" alt="" class="nail">
+                        </div>
+                    </div>
+                <div id="C4">
+                        </div> 
+                    <!--nails insturctions-->
+                <div id="heading">
+                    <h1 class="title">Nail Disease Prediction</h1>
+                    <h2>Upload an image of your nail and recieve an immediate diagnosis</h2>
+                    <div id="C5">
+                    </div> 
+                </div>
+                    <div class="box">
+                        <div class="space">
+                            <h1>Instructions</h1>
+                            <img src="../static/img/nails.png" alt="" class="inst">
+                        </div>
+                    </div>
+                    <!--Results Box-->
+                    <div class="box_result">
+                        <h1 class="title">Result</h1>
+                        <div class="cont">
+                            
+                            <div class="result">
+                               <h1 style="font-weight: bold; font-size: 30px; font-family:Arial, Helvetica, sans-serif;">{{pred}}</h1>
+                               <br> 
+                               <h1 style="font-weight: lighter; font-size: 25px; font-family:Arial, Helvetica, sans-serif;"><span style="font-weight: bold; font-size: 25px;">Date:</span > {{date1}}</h1>
+                                <br>
+                                {%if advice1!="":%}
+                                <h1 style="font-weight: bold; font-size: 25px; font-family:Arial, Helvetica, sans-serif;">Medical Advise:</h1 >
+                                <h1 class="medical" style="font-weight: lighter; font-size: 25px; font-family:Arial, Helvetica, sans-serif; margin-top: -10px;">{{advice1}}</h1>
+                                {% endif %} 
+                            </div>
+                            <div class="photo"><img src="{{img}}" alt=""></div>
+                        </div>
+                        <div class="btn-wrapper">
+                            <button class="print" onclick="window.print()">Print</button>
+                            <a href="{{url_for('index')}}#diagnose" class="again" >Try again</a> 
+                        </div>
+                    </div>
+
+                    <!--About Us Box-->
+                    <div class="about_us">
+                            <h1 id="aboutUs">About Us</h1>
+                            <h2>Get to Know Us Better and Share Your Thoughts</h2>
+                            <div id="C7">
+                            </div>
+                        </div>
+                        <div class="box2_1">
+                            <div class="space1">
+                                <h1 class="title">Our vision</h1>
+                                <p>Our mission is to increase the availability of expert nail information.
+                                    Our service breaks down the barriers between you and quick, trustworthy 
+                                    nail disease diagonosis.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="C8">
+                        </div>
+                        <!--Contact Us Box-->
+                        <div id="box3">
+                            <div class="space1">
+                                <h1 class="title">Contact Us</h1>
+                                <p>It is very important to us to stay in touch with you, so we are ready
+                                to answer any question that intrests you.</p>
+                                <div class="email">
+                                <a href="mailto: abc@example.com" class="send">Send Us an Email</a></div>
+                                <div class="social">
+                                    <p>or</p>
+                                    <p>Reach us via social media applications</p>
+                                </div>
+                                <div class="twitter">
+                                    <ul class="social-icons">
+                                        <a href="https://www.facebook.com/"><img src="../static/img/facebook.png" alt="facebook" target="_blank" ></a>
+                                        <a href="https://www.instagram.com/"><img src="../static/img/instagram.png" alt="Instagram" target="_blank"></a>
+                                        <a href="https://twitter.com/?lang=en"><img src="../static/img/twitter.png" alt="Twitter" target="_blank"></a>
+                                     </ul>    
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                
+            </div>
+            <script src="{{url_for('static', filename='index.js')}}"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+            <!--JS for error message-->
+            
+            
+        </body>
+        </html>
+        

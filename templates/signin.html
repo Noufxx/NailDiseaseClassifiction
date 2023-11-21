@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/signin.css">
+    <title>Nail Scope</title>
+</head>
+
+<body>
+    <div class="left">
+        <img src="../static/img/Logo.png" alt="">
+        <h2>Don't Have an Account Yet?</h2>
+        <h4>Register now and unlock amazing features</h4>
+        <a href="{{url_for('signup')}}" class="signup-button" type="button" style="text-decoration: none;">Sign Up</a>
+    </div>
+    <div class="right">
+        <h1>Sign In</h1>
+        <form method="POST" id="form">
+            <div class="form-control">
+                <div>{{ userpass }}</div>
+                <div>{{ entered }}</div>
+            <label for="name" class="label"> Username </label>
+            <input
+            type="text"
+            value="{{ request.form['username']}}"
+            name="username"
+            id="username"
+            class="input"/>
+            <p style="color: #e74c3c; font-size: 13px;">{{ usermsg }}</p>
+            <small></small>
+            </div>
+
+            <div class="form-control">
+            <label for="name" class="label" style="margin-top: 40px;"> Password </label>
+            <input
+            type="password"
+            name="pass"
+            id="pass"
+            class="input"/>
+            <br>
+            <input type="checkbox" onclick="myPass1()"> <span  style="font-size: 14px;">Show Password</span>
+            <small></small>
+            </div>
+
+            <br>
+            <a href="{{url_for('forgotPassword')}}" class="forgot-btn">Forgot Password?</a>
+            {% if updateMsg !='': %}
+                <p class="doneResetPassText"><b>{{updateMsg}}</b></p>
+            {% endif %}
+            <br>
+            <div class="btn-wrapper">
+                <input type="submit" class="signin-btn" id="submit" name="submit" value="Sign In" >
+                <a href="{{url_for('index')}}" class="cancel-btn" type="button">Cancel</a>
+            </div>
+            <p style="color:#e74c3c; margin-top:50px; margin-left:170px;"></p>
+        </form>
+    </div>
+    <script src="{{url_for('static', filename='signin.js')}}"></script>
+</body>

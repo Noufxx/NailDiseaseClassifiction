@@ -1,0 +1,46 @@
+<footer>
+    <hr><br><br>
+    <div class="row">
+        <div class="col">
+            <p class="title">FLORA <span>LAND</span></p>
+            <ul class="pages">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="AllProductPage.php">Products</a></li>
+                <li><a href="contact.php">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <p class="title">NEWS<span>LETTER</span></p>
+            <p class="col2-txt">Subscribe to our weekly newsletter </p>
+            <form>
+                <img src="../static/img copy/letter.png" alt="newsletter">
+                <input id="email" name="email" type="email" placeholder="Enter Your Email" required is-email>
+                <input type="submit" value="Send" style="color: black;" onclick="ValidateEmail()">
+                <script>
+                    function ValidateEmail()
+                        {
+                        inputText = document.getElementById("email");
+                        var mailformat = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$";
+                        if(inputText.value.match(mailformat))
+                        alert("Thank You! You have been added to our newsletter list.");    //The pop up alert for a valid email address
+                        else
+                        alert("You have entered an invalid email address.");    //The pop up alert for an invalid email address
+                        
+                        }
+                </script>
+            </form>
+        </div>
+        <div class="col">
+            <p class="title">FOLLOW<span> US</span></p>
+            <div class="social">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/"><img src="../static/img copy/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="../static/img copy/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://twitter.com/?lang=en"><img src="../static/img copy/twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr><br><br>
+    <p class="copyright"><strong>&copy; 2022 Flora Land, All Rights Reserved</strong></p>
+</footer>

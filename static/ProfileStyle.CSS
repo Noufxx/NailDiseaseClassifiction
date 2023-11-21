@@ -1,0 +1,235 @@
+body{
+   
+  font-family:Arial, Helvetica, sans-serif;
+ 
+ 
+}
+table {
+          width: 100%;
+}
+
+.tab{
+   text-align: center;
+   line-height:40px;
+   margin-left: -5%;
+}
+.tab2{
+line-height:40px;
+margin-left: 4.5%;
+margin-top: 3%;
+}
+      td{
+        height: 50px; 
+      }
+.th_label{
+  font-weight: bold;
+  color:#998679;
+  
+}
+.p_head{
+  position:relative;
+  margin-left: 12%;
+  margin-top: 3%;
+}
+.back-arrow{
+margin-right: 5%;
+}
+.p_head1{
+position:relative;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+.pp{
+position:relative;
+   margin-left:19%;
+   margin-top: 2%;   
+}
+.pp a{
+  position:relative;
+  margin-left: 49%;
+}
+.form{
+  background-color: white;
+  box-shadow: 1px 2px 1px 1px #F0EAC6;
+  border-radius: 15px;
+  position:relative;
+  margin-left: 18%;
+  margin-top: 2%;
+  width: 58.5%;
+  padding: 2px 16px;
+  height: 50%;
+}
+
+.img{
+  position:relative;
+  margin-left: 45%;
+  margin-top: 3%;
+}
+.section_profile{
+ position:relative;
+ height: 100%;
+  
+ 
+}
+.section_PastD{
+  position:relative;
+  height: 110%; 
+  margin-top:5%;
+  margin-left:10%;
+}
+.PD_Card{
+  background-color: white;
+  box-shadow: 1px 2px 1px 1px #F0EAC6;
+  border-radius: 15px;
+  position:relative;
+  margin-left: 9.25%;
+  margin-top: 3%;
+  width: 65%;
+  padding: 2px 16px;
+
+}
+.PD_Card_V{
+  background-color: white;
+  box-shadow: 1px 2px 1px 1px #F0EAC6;
+  border-radius: 15px;
+  position:relative;
+  margin-left: 15%;
+  margin-top: 3%;
+  width: 65%;
+  padding: 2px 16px; 
+}
+.button { 
+border: none;
+padding: 10px 30px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+font-weight: bold;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 25px;
+display:inline;
+}
+
+.button_logout {
+background-color: #fffbe2; 
+color: rgb(71, 38, 4); 
+border: 1.25px solid rgb(71, 38, 4);
+position:relative;
+margin-left: 41%;
+bottom : 20px;
+}
+
+.button_logout:hover {
+background-color: rgb(71, 38, 4);
+color: white;
+}
+
+.button_edit {
+padding: 10px 60px;
+background-color: rgb(71, 38, 4);
+color: white;
+position:relative;
+margin-left: 64%;
+bottom : 19%;
+}
+.button_edit:hover {
+background-color: white; 
+color: rgb(71, 38, 4); 
+border: 1.25px solid rgb(71, 38, 4);
+}
+.button_view{
+background-color: white; 
+color: rgb(71, 38, 4); 
+border: 1.25px solid rgb(71, 38, 4);
+position:relative; 
+padding: 5px 20px;
+}
+.button_view:hover{
+background-color: rgb(71, 38, 4);
+color: white; 
+}
+.button_print{
+margin-left: 1%;
+background-color: rgb(71, 38, 4); 
+border: 1.25px solid rgb(71, 38, 4);
+color: white; 
+position:relative; 
+padding: 5px 20px;  
+}
+.button_print:hover{
+background-color: white;
+color: rgb(71, 38, 4);  
+}
+.button_print2{
+margin-left: 42%;
+background-color: rgb(71, 38, 4); 
+border: 1.25px solid rgb(71, 38, 4);
+color: white; 
+position:relative; 
+padding: 10px 50px;  
+}
+.button_print2:hover{
+background-color: white;
+color: rgb(71, 38, 4);  
+}
+.button_save{    
+margin-left: 60%;
+bottom: 32px;    
+background-color: rgb(71, 38, 4); 
+border: 1.25px solid rgb(71, 38, 4);
+color: white; 
+position:relative; 
+padding: 10px 35px;  
+}
+.button_save:hover{
+background-color: white;
+color: rgb(71, 38, 4);
+}
+.success{
+color: green;
+size: 20px;
+text-align: center;
+}
+.right_img{
+margin-left: 65%;
+position:absolute;
+top: 12%;
+}
+
+@media print{
+body{
+  size: A4 portrait;
+  border:1px solid #998679;
+  margin-left: 2px;
+}
+.PD_Card_V{
+  box-shadow:none;}
+
+.button{
+  display:none;
+}  
+.p_head1{
+  width: 100%;
+}
+.back-arrow{
+  display:none;
+}
+.head-img{
+  width: 40%;
+}
+.tab2{
+  width: 100%;
+  height: 100%;
+  font-size: 150%; 
+  position: relative;
+  right: 13%;
+}
+.im{
+  margin-top: 30%;
+  position: relative;
+  left: 35%;
+  width: 300px;
+  height: 300px;
+}
+}

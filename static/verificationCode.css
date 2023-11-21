@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.fpLockImage{
+    margin-top: 2em;
+   
+    width: 172px;
+    height: 172px;
+    
+}
+
+.fp-textbox{
+    width: 22em;
+    height: 50px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    
+    letter-spacing: 0.05em;
+    margin-right: auto;
+    margin-left: auto;
+   
+    color: #404246;
+    border: 1px solid #cfcece;
+    background: white;
+       
+}
+
+.vcLinkDiv{
+    margin-top: 1.5em;
+}
+
+.vcLink{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 33px;
+    color: #564034;
+}
+
+.fp-div-buttons{
+    margin-top: 1.5em;
+}
+
+.fp-button1{
+    width: 200px;
+    height: 55px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 38px;
+
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    background-color: #564034;
+    
+    border-radius: 70px;
+    margin: 0.8em;
+      
+}
+
+.fp-button2{
+    width: 200px;
+    height: 55px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 38px;
+    
+
+   
+    color: #564034;
+    background-color: #FFFFFF;
+    border-color: #564034;
+    
+    border-radius: 70px;
+    margin: 0.8em;
+    
+}
+
+.fp-paragraph{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: #000000;
+
+}
+
+.fp-button1:hover{
+    cursor: pointer;
+}
+
+.fp-button2:hover{
+    cursor: pointer;
+    
+}
+
+.errorMessageStyle{
+    color: red;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}

@@ -1,0 +1,42 @@
+<!--
+    Done by: Maram Lutfi Alfaraj - ID: 2190001583
+-->
+
+{% extends 'FVR_layout.html' %}
+
+{% block title %}
+    Verification Code
+{% endblock %}
+
+{% block linkCSS %}
+    <!--CSS Link-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='verificationCode.css')}}">
+{% endblock %}
+
+{% block heading %}
+    Verify Your Email
+{% endblock %}
+
+{% block whtieboxContent %}
+    <img class="fpLockImage" src="../static/img/message.png" alt="image">
+    <p class="fp-paragraph">Verification code will be sent to <b>{{ session['vEmail'] }}</b> if it matches an account</p>
+    <!--Form-->
+    <form action="{{ url_for('verificationCode')}}" method="POST" id="form">
+        <!--Verificaiton Code-->
+        <input class="fp-textbox" name="vc_textbox" id="vc_textbox" type="text" placeholder="Enter verification code">
+        <!--Error Message-->
+        <p class='errorMessageStyle'><b>{{ errormsg }}</b></p>
+        <div class="vcLinkDiv">
+            <!--Resend Verification Code Link-->
+            <a class="vcLink" href="{{ url_for('sendCode') }}">Resend code</a>
+        </div>
+        <!--Buttons-->
+        <div class="fp-div-buttons">
+            <button class="fp-button1" name="vc_verify" id="vc_verify" type="submit">Verify</button>
+            <!--take user to forgot password page-->
+            <a href="{{url_for('forgotPassword')}}"><button class="fp-button2" name="" type="button">Back</button></a>
+        </div>
+    </form>
+
+{% endblock %}
+

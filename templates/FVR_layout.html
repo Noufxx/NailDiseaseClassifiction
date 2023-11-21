@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='FVR_layout.css')}}">
+    {% block linkCSS %}{% endblock %}
+</head>
+<body>
+
+    <div class="divTopText">
+        <h1 class="h1TopText">{% block heading %}{% endblock %}</h1>
+    </div>
+    
+    <div class="Whitebox">
+        {% block whtieboxContent %}
+        {% endblock %}
+    </div>
+ 
+</body>
+
+</html>

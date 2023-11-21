@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fffbe2;
+}
+
+input {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ecede8;
+    width: 80%;
+    margin: 5px;
+    position: relative;
+}
+
+input:focus {
+    border-color: #472604;
+    box-shadow: 0px 0px 3px 0px #70553a;
+}
+
+h2 {
+    text-align: center;
+    margin-left: 30px;
+    position: relative;
+    left: -3%;
+}
+
+form p {
+    margin: 30px;
+}
+
+select {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ecede8;
+    width: 80%;
+    margin: 5px;
+}
+
+select:focus {
+    border-color: #8ba888;
+    box-shadow: 0px 0px 3px 0px #472604;
+}
+
+textarea {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ecede8;
+    width: 80%;
+    margin: 5px;
+}
+
+textarea:focus {
+    border-color:  #472604;
+    box-shadow: 0px 0px 3px 0px  #472604;
+}
+
+.submit_area {
+    position: relative;
+    margin-left: 30px;
+    margin-right: 5%;
+    margin-bottom: 25px;
+}
+
+.submit_area input {
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+
+.submit_area input:hover {
+    background-color: #472604;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 10%;
+    box-shadow: 0px 0px 2px 2px white;
+    background-color: #472604;;
+    height: 80px;
+}
+
+.back_button {
+    position: relative;
+    left: -37%;
+    background-color: #472604;
+    border: 0;
+}
+
+.back_button:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.background {
+    min-height: 80vh;
+    background: white;
+    margin: 3em;
+    width: 50%;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    position: relative;
+    left: 21%;
+}
+
+form {
+    margin-left: 13%;
+}
+
+label {
+    margin-left: 5px;
+}
+
+footer p {
+    text-align: center;
+    background-color: #c7cdc0;
+    padding: 5px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.22);
+}
+
+p span {
+    margin-left: 18px;
+    color: gray;
+}
+
+p small {
+    color: #e74c3c;
+}
+
+.msg{
+    font-weight: bold;
+    color:#998679;
+    
+}

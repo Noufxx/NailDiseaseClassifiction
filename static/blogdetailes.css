@@ -1,0 +1,139 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  
+  }
+  body {
+    /* background-color: #fffbe2; */
+    font-family: "Roboto", sans-serif;
+}
+.abWhiteAndBlack2
+{
+  background-image: linear-gradient(180deg, #472604 20%, #fffbe2 50%);
+  height: 900px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    gap: 2%;
+    font-family: sans-serif;
+    padding-top: 30px;
+}
+
+
+card__image {
+    box-sizing: border-box;
+      width: 50%;
+      height: 100px;
+      object-fit: cover;
+      display: block;
+     
+  }
+  
+  .card__content {
+      line-height: 1.5;
+      font-size: 0.9em;
+      padding: 15px;
+      background: #fafafa;
+     
+  }
+  
+
+  .cards h3{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+  .cards p{
+    font-family: var(--text-font);
+    color: var(--para-text);
+    font-size: calc(var(--width)/20);
+  }
+  
+
+  .date p{
+    font-size: calc(var(--width)/25);
+    color: grey;
+    font-size: smaller;
+  }
+
+
+  
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding-left: 9.5%;
+    padding-right: 2%;
+    padding-top: 15px;
+    padding-bottom: 15px ;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #472604;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #472604;
+
+}
+
+.navbar h1 {
+
+
+    align-items: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(105, 82, 32);
+    margin-left: -4%;
+    cursor: default;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+nav ul li a:hover {
+
+    text-decoration: underline;
+
+
+}
+
+.back_button {
+    position: relative;
+    left: -37%;
+    background-color: #472604;
+    border: 0;
+}
+
+.back_button:hover {
+    transform: scale(1.1);
+    color: black;
+}
+

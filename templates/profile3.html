@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ProfileStyle.CSS') }}">
+    <title>Nail Scope</title>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+           background-color: #fffbe2;
+        }
+        input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: rgb(71, 38, 4);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    </style>
+    </head>
+    <body>
+<div calss="section_profile">
+    
+<div class="p_head"><a href="javascript: history.go(-1)" style="text-decoration: none;"><img src="../static/img/arrow-back-removebg-preview.png" width=2% class="back-arrow" ></a><img src="../static/img/profile-removebg-preview.png" width=15% ><a href="{{url_for('logout')}}" style="text-decoration: none;"><button class="button button_logout">Logout</button></a></div>
+<div class="pp"> <img src="../static/img/pp-removebg-preview.png" width=10% > <a href="{{url_for('forgotPassword')}}">Reset Password</a></div>
+<div class="form">
+    <br>
+    <table>
+        <tr>   
+        {% for user in userDetails %} 
+    <td><label for="Fname" style="font-weight: bold">First Name</label></td>
+    <td><label> {{user['First_Name']}}  </label></td>
+    
+        
+    <td><label for="g" style="font-weight: bold">Gender</label></td>
+
+                {%if user['Gender']=="Female":%}
+                    <td><input type="radio" name="gender" value="male" disabled="disabled"> Male
+                        <input type="radio" name="gender" value="female" checked> Female</td>
+                {% else %}
+                    <td><input type="radio" name="gender" value="male" checked> Male
+                        <input type="radio" name="gender" value="female"disabled="disabled"> Female</td>
+                {% endif %}    
+    
+        </tr>
+    
+        <tr>
+    <td><label for="Lname" style="font-weight: bold">Last Name</label></td>
+    <td><label>{{user['Last_Name']}}</label></td>
+   
+        
+    <td><label for="uname" style="font-weight: bold">Username</label></td>
+    <td><label>{{user['Username']}}</label></td>
+   
+        </tr>
+         
+        <tr>
+    <td><label for="dob" style="font-weight: bold">Date of Birth</label></td>
+    <td><label>{{user['DOB']}}</label></td>
+   
+    
+    <td><label for="email" style="font-weight: bold">Email</label></td>
+    <td><label>{{user['Email']}}</label></td>
+        </tr>
+        
+        <tr>
+    <td><label for="Natio" style="font-weight: bold">Nationality</label></td>
+    <td><label>{{user['Nationality']}}</label></td>
+        </tr>
+        
+    
+
+    </table>
+    <a href="{{url_for('index2')}}" style="text-decoration: none;">
+         <button class="button button_edit">Edit</button>
+    </a>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category,message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+    {% endwith %}  
+    </div>
+            {%if user['Type']=="User":%}
+   <!--Check if the user type is User then show it otherwise will not show-->
+   <div class="img"><a href="#PD"><img src="../static/img/PD-removebg-preview.png" width=15% ></a></div>
+</div>
+             
+ <div class="section_PastD" id="PD">
+    <div class="PastD">
+        <img src="../static/img/PDT-removebg-preview.png" width=17% style="position: relative; left: 10%;" >    
+           <div class="PD_Card"> 
+            <label class="th_label" style="position: relative; margin-left:9%;  line-height:40px;">Date</label>
+                      <label class="th_label" style="position: relative; margin-left:25%">Diagnosis</label>
+                      <label class="th_label" style="position: relative; margin-left:24%">Action</label>
+                     
+                        {% if msg is defined %}
+                            <p class="th_label" style="text-align: center"> {{msg}} </p>
+                        {% endif %}
+            
+            
+               <!--Check if the user have past diagnosis or will not show the table will show a message only-->
+        
+            {% for diagnosis in userDetails2 %}    
+                <table class="tab" style="Table-Layout:fixed">
+                   <tr>
+                       <td><label>{{diagnosis['Date']}}</label></td>
+                       <td><label>{{diagnosis['Diagnosis']}}</label></td>
+                       <td>
+                        <form action="{{ url_for('view_pd') }}" method="post" style="display: inline;">
+                        <input type="hidden" name="diagnos_ID" value="{{diagnosis['Diagnosis_ID']}}">   
+                        <button name="view" class="button button_view">View</button>
+                        </form>  
+                        <iframe src="print" style="display:none;" name="frame"></iframe>
+                        <button name="print" class="button button_print" onclick="frames['frame'].print()">print</button>
+                        <!--<button name="print" class="button button_print" onclick="window.open('print').print()">print</button>-->
+                        
+                    </td>
+                   </tr>
+               </table>
+            {% endfor %}
+              
+            {% endif %} 
+            {% endfor %}
+               
+           </div>
+    </div>
+</div>
+
+           
+
+
+ </body>
+</html>

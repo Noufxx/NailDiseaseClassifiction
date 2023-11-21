@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Scope</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'adminForms.css') }}">
+    <!--LINK TO STYLESHEET-->
+    <script type="text/javascript" src="{{ url_for('static', filename= 'admin-forms.js') }}"></script>
+</head>
+
+<!--BODY-->
+
+<body>
+
+    <!--HEADER-->
+    <header class="backgroundheader">
+
+        <!--BACK BUTTON-->
+        <button class="back_button">
+            <a href="{{url_for('admin')}}"><img src="../static/img/icon1.png" alt="Back Button" width="25px" height="25px"></a>
+        </button>
+
+        <!--FORM TITLE-->
+        <h2 style="color:white;">Edit New Blog</h2>
+
+    </header>
+    <!--END OF HEADER-->
+    <!--ADD FORM-->
+    <div class="background">
+
+        <form id="form" method="post" action="{{url_for('EditBlog', Blog_ID= blogDetails['Blog_ID'] )}}">
+            <p>
+                <label>Author Name:</label><br>
+                <input type="text" placeholder="Enter the author's name..." value= "{{blogDetails['Author_name']}}" id="Author_name" name="Author_name" size="25"
+                    autofocus><br>
+                <small id="helpText1"></small>
+            </p>
+
+            <p>
+                <label>Blog Title:</label><br>
+                <input type="text" placeholder="Type a blog title..." value= "{{blogDetails['Title']}}" id="Title" name="Title" size="25"
+                    autofocus><br>
+                <small id="helpText1"></small>
+            </p>
+
+            <p>
+            <label for="date">Date:</label><br>
+            <input type="date" value= "{{blogDetails['Date']}}" id="Date" name="Date">
+            </p>
+
+            <p>
+                <label> Upload blog image:</label><br>
+                <input type="file" accept="image/*" value= "{{blogDetails['Photo']}}" id="Photo" name="Photo"><br>
+                <small id="helpText5"></small>
+            </p>
+            
+            <p>
+                <label> Description: </label><br>
+                <textarea name="Description" id="Description" cols="50" rows="5"
+                    placeholder="Type a description here...">{{blogDetails['Description']}}</textarea><br>
+                <small id="helpText10"></small>
+            </p>
+
+            <p>
+                <label> Content: </label><br>
+                <textarea name="Content"  id="Content" cols="50" rows="20"
+                    placeholder="Type your content here...">{{blogDetails['Content']}}</textarea><br>
+                <small id="helpText10"></small>
+            </p>
+
+            <p>
+                <label> Reference: </label><br>
+                <textarea name="Reference" value= "{{blogDetails['Reference']}}" id="Reference" cols="50" rows="5"
+                    placeholder="Type your Reference here..."></textarea><br>
+                <small id="helpText10"></small>
+            </p>
+
+            <div class="submit_area">
+                <input type="submit" id="submit" value="Edit blog" name="create_blog">
+                <input type="reset" id="reset" value="Clear">
+            </div>
+        </form>
+        <!--END OF ADD FORM-->
+
+    </div>
+
+</body>
+<!--END OF BODY-->
+
+<!--PHP include statement for footer.-->
+
+
+</html>

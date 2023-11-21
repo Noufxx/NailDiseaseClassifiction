@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head > 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'blogdetailes.css') }}">
+    <title>Nail Scope</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body style="background-color: #fffbe2">
+  
+    <div class="container">
+        <div class="navbar">
+           <h1 style= 'color: white'>Blogs</h1>
+                 <nav>
+                     <ul>
+                         <li><a href="#uploadbox">Diagnose</a></li>
+                         <li><a href="#heading1">Nail Diseases</a></li>
+                         <li><a href="#box3">About Us</a></li>
+                         <li> 
+                            <a href="{{url_for('admin')}}"><img src="../static/img/user.png" alt="Profile Button" width="40px" height="40px"></a>
+                    </li>
+                     </ul>
+                 </nav>
+             </div> </div>  
+   
+
+<div class="abWhiteAndBlack2">
+<div class="cards">
+  <h3>{{details['Title']}}</h3>
+  <img class="card__image" src="../static/img/{{details['Photo']}}" alt="">
+  <div class="date">
+  <p >Posted By: {{details['Author_name']}} &nbsp; &nbsp;Posted Date: {{details['Date']}}</p>
+</div>
+  <p>{{details['Description']}}</p><br>
+  <p>{{details['Content']}}</p><br>
+  <p>{{details['Reference']}}</p>
+</div>
+</div>
+
+</body>
+</html>
+<!-- <p>Take a close look at your fingernails. Are they strong and healthy looking? Or do you see ridges, dents, or areas of unusual color or shape? Many less than desirable nail conditions can be avoided through proper fingernail care. Others might indicate an underlying condition that needs attention.<br>
+
+    Fingernails: What's normal, what's not
+    
+    Your fingernails — composed of laminated layers of a protein called keratin — grow from the area at the base of the nail under your cuticle. Healthy fingernails are smooth, without pits or grooves. They're uniform in color and consistency and free of spots or discoloration.
+    
+    Sometimes fingernails develop harmless vertical ridges that run from the cuticle to the tip of the nail. Vertical ridges tend to become more prominent with age. Fingernails can also develop white lines or spots due to injury, but these eventually grow out with the nail.
+    
+    Not all nail conditions are normal, however. Consult your doctor or dermatologist if you notice:
+    
+    Changes in nail color, such as discoloration of the entire nail or a dark streak under the nail
+    Changes in nail shape, such as curled nails
+    Thinning or thickening of the nails
+    Separation of the nail from the surrounding skin
+    Bleeding around the nails
+    Swelling or pain around the nails
+    Failure of nails to grow out<br>
+    Fingernail care: Do's
+    
+    To keep your fingernails looking their best:
+    
+    Keep fingernails dry and clean. This prevents bacteria from growing under your fingernails. Repeated or prolonged contact with water can contribute to split fingernails. Wear cotton-lined rubber gloves when washing dishes, cleaning or using harsh chemicals.
+    Practice good nail hygiene. Use a sharp manicure scissors or clippers. Trim your nails straight across, then round the tips in a gentle curve.
+    Use moisturizer. When you use hand lotion, rub the lotion into your fingernails and cuticles, too.
+    Apply a protective layer. Applying a nail hardener might help strengthen nails.
+    Ask your doctor about biotin. Some research suggests that the nutritional supplement biotin might help strengthen weak or brittle fingernails.
+    <br>Fingernail care: Don'ts
+    
+    To prevent nail damage, don't:
+    
+    Bite your fingernails or pick at your cuticles. These habits can damage the nail bed. Even a minor cut alongside your fingernail can allow bacteria or fungi to enter and cause an infection.
+    Pull off hangnails. You might rip live tissue along with the hangnail. Instead, carefully clip off hangnails.
+    Use harsh nail care products. Limit your use of nail polish remover. When using nail polish remover, opt for an acetone-free formula.
+    Ignore problems. If you have a nail problem that doesn't seem to go away on its own or is associated with other signs and symptoms, consult your doctor or dermatologist for an evaluation.
+   <br> A note about manicures and pedicures
+    
+    If you rely on manicures or pedicures for healthy-looking nails, keep a few things in mind. Stick to salons that display a current state license, and work only with technicians also licensed by the state board. Don't have your cuticles removed — they act to seal the skin to the nail plate, so removal can lead to nail infection. Also, make sure your nail technician properly sterilizes all tools used during your procedure to prevent the spread of infection.
+    
+    You might also ask how the foot baths are cleaned. Ideally, a bleach solution is used between clients and the filters are cleaned regularly.
+    
+    It's easy to neglect your nails — but taking some basic steps can keep your fingernails healthy and strong.</p> -->

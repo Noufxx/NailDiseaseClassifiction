@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ProfileStyle.CSS') }}">
+    <title>Nail Scope</title>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+           background-color: #fffbe2;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="p_head1"><a href="javascript: history.go(-1)" style="text-decoration: none;"><img src="../static/img/arrow-back-removebg-preview.png" width=2% class="back-arrow" ></a><img src="../static/img/DD-removebg-preview.png" width=25% class="head-img"></div>
+    <div class="PD_Card_V">
+        {% for diagnosis in userDetailsD %} 
+        <table style="Table-Layout:fixed" class="tab2">
+            <tr>
+              <td><h2 style="margin-bottom: 25px;"> {{diagnosis['Diagnosis']}} </h2></td>
+              <td rowspan="3"><img src="../static/uploads/{{diagnosis['Photo']}}" width="200px" height="200px" style="margin-left: 10%;" class="im"></td>
+            </tr>
+            
+            <tr>
+              <td><h3 style="display:inline;"> Date: </h3>
+                <h3 style="display:inline; font-weight: normal;"> {{diagnosis['Date']}}</h3></td>
+            </tr>
+            
+            <tr>
+              <td><h3> Medical Advice: </h3>
+                <h3 style="font-weight: normal;"> {{diagnosis['Advice']}}</h3></td>
+            </tr>
+          </table>
+       
+        {% endfor %}
+
+        <button name="print" class="button button_print2" onclick="window.print()">Print</button>
+        <br><br><br>
+        </div>
+    
+    </body>
+</html>

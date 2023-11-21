@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Scope</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'adminForms.css') }}">
+    <!--LINK TO STYLESHEET-->
+    <script type="text/javascript" src="{{ url_for('static', filename= 'admin-forms.js') }}"></script>
+</head>
+
+<!--BODY-->
+
+<body>
+
+    <!--HEADER-->
+    <header class="backgroundheader">
+
+        <!--BACK BUTTON-->
+        <button class="back_button">
+            <a href="{{url_for('admin')}}"><img src="../static/img/icon1.png" alt="Back Button" width="25px" height="25px"></a>
+        </button>
+
+        <!--FORM TITLE-->
+        <h2 style="color:white;">Create New Blog</h2>
+
+    </header>
+    <!--END OF HEADER-->
+    {% if msg is defined %}
+    <p class="msg" style="text-align: center"> {{msg}} </p>
+    {% endif %}
+    <!--ADD FORM-->
+    <div class="background">
+        <form id="form" method="post" action="{{url_for('AddBlog')}}">
+            <p>
+                <label>Author Name:</label><br>
+                <input type="text" placeholder="Enter the author's name..." id="Author_name" name="Author_name" size="25"
+                    autofocus><br>
+                <small id="helpText1"></small>
+            </p>
+
+            <p>
+                <label>Blog Title:</label><br>
+                <input type="text" placeholder="Type a blog title..." id="Blog_Title" name="Title" size="25"
+                    autofocus><br>
+                <small id="helpText2"></small>
+            </p>
+
+            <p>
+            <label for="date">Date:</label><br>
+            <input type="date" id="Blog_Dates" name="Date"required>
+            </p>
+
+            <p>
+                <label> Upload blog image:</label><br>
+                <input type="file" accept="image/*" id="Blog_Photo" name="Photo"required><br>
+                <small id="helpText5"></small>
+            </p>
+            
+            <p>
+                <label> Description: </label><br>
+                <textarea name="Description" id="Blog_Description" cols="50" rows="5"
+                    placeholder="Type a description here..."></textarea><br>
+                <small id="helpText3"></small>
+            </p>
+
+            <p>
+                <label> Content: </label><br>
+                <textarea name="Content" id="Blog_Content" cols="50" rows="20"
+                    placeholder="Type your content here..."></textarea><br>
+                <small id="helpText4"></small>
+            </p>
+
+            <p>
+                <label> Reference: </label><br>
+                <textarea name="Reference" id="Reference" cols="50" rows="5"
+                    placeholder="Type your Reference here..."></textarea><br>
+            </p>
+
+            <div class="submit_area">
+                <input type="submit" id="submit" value="Create Blog" name="create_blog">
+                <input type="reset" id="reset" value="Clear">
+            </div>
+        </form>
+        <!--END OF ADD FORM-->
+
+    </div>
+
+
+</body>
+<!--END OF BODY-->
+</html>

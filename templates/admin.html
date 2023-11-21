@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head > 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'admins.css') }}">
+    <title>Nail Scope</title>
+</head>
+
+<body style="background-color: #fffbe2">
+
+  <div class="container">
+    <div class="navbar">
+      <a href="{{url_for('index_Profile')}}"><img src="../static/img/userb.png" alt="" class="profile" width="10%" style="margin-top: 20px;"> </a>
+      <h1 style="color: #472604; position: relative; right: 38%; margin-top: 20px;">Welcome {{name}}!</h1>
+         </div> </div>  
+         
+  {% with messages = get_flashed_messages(with_categories=true) %}
+
+    {% for category,message in messages %}
+  
+      <div class="msg">{{ message }}</div>
+  
+    {% endfor %}
+
+  
+  {% endwith %} 
+
+  <div class="panel_title">
+    <h2 style="color: #472604;">Manage Blogs</h2>
+  <a href="{{ url_for('AddBlog')}}" class="add_button" name="add_button">+ ADD Blog</a>
+  </div>
+
+<div class="cards">
+ 
+{% for blog in blogs %}
+<div class="card">
+  <div class="card__content">
+  <h3>{{blog['Title']}}</h3>
+  <img class="card__image" src="../static/img/{{blog['Photo']}}" alt="">
+  <div class="date">
+  <p >{{blog['Author_name']}}</p> <p>{{blog['Date']}}</p>
+</div>
+  <br>
+  <p>{{blog['Description']}}</p>
+  <br><a class="add_button" href="{{ url_for('edt', Blog_ID= blog['Blog_ID'] ) }}">Edit</a>
+  <a class="d_button" value="Click Me!" onClick="return confirm('Are you sure want to delete this blog?')" href="{{ url_for('DelBlog', Blog_ID= blog['Blog_ID'] ) }}" style="color: white;"  onMouseOut="this.style.color='white'" onMouseOver="this.style.color='rgb(163, 3, 3)'" >Delete</a>
+</div>
+</div>
+{% endfor %}
+
+</div>
+<br><br><br><br><br><br>
+</body>
+
+</html>
